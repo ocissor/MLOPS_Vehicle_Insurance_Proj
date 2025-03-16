@@ -40,5 +40,7 @@ def configure_logger():
     logger.addHandler(file_handler)
     logger.addHandler(console_handler)
 
+    return logger
+
 # Configure the logger
-configure_logger()
+logger = configure_logger()

@@ -1,6 +1,6 @@
 import sys
 import logging
-
+from src.logger import logger
 def error_message_detail(error: Exception, error_detail: sys) -> str:
     """
     Extracts detailed error information including file name, line number, and the error message.
@@ -20,7 +20,7 @@ def error_message_detail(error: Exception, error_detail: sys) -> str:
     error_message = f"Error occurred in python script: [{file_name}] at line number [{line_number}]: {str(error)}"
     
     # Log the error for better tracking
-    logging.error(error_message)
+    logger.error(error_message) 
     
     return error_message
 
